@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/FontAwesome.otf');
+  }
+
+
+body{
+    background: #111827 ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.mytodolist{
+    margin-top: 100px !important;
+    padding: 30px;
+    width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+}
+.inputText{
+    width: 80%;
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    background: #eee;
+}
+button{
+    padding: 4px;
+}
+.doitem{
+    background: #eee;
+    padding: 5px;
+    font-size: 16px;
+    width: 80%;
+    position: relative;
+    padding-left: 21px;
+}
+.doitem.checked{
+    text-decoration: line-through;
+}
+.doitem.checked::before{
+    font-family: 'FontAwesome';
+    content: '\f00c';
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+
+.edit{
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/edit.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    right: 30px;
+    top: 0;
+}
+.delete{
+    display: block;
+    width: 28px;
+    height: 28px;
+    background: url(../images/delete.png) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    right: 0px;
+    top: 0;
+}
+span:hover{
+    border: 1px solid rgb(100, 100, 100);
+}
+.pclear{
+    text-align: center;
+}
+.clear{
+    text-align: center;
+    color: red;
+    font-family: cursive;
+    cursor: pointer;
+    border: none;
+}
+.cell{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 0%);
+}
+.carotable{
+    background: white;
+    position: relative;
+}
+.cell.xshape{
+    background: url(../images/x.png) no-repeat;
+    background-size: 50%;
+    background-position: center center;
+}
+.cell.oshape{
+    background: url(../images/o.png) no-repeat;
+    background-size: 50%;
+    background-position: center center;
+}
+.btn{
+    width: 50px;
+    height: 50px;
+    margin: 2px;
+}
+.cell.winshape{
+    background-color: green;;
+}
+.popup{
+    display: block;
+    position: absolute;
+    display: none;
+    background: white;
+    padding: 5px;
+    border: 1px solid rgb(0, 0, 0, 0.1);
+}
+.popup.active{
+    display: block;
+    left: 50px;
+    top: 50px;
+}
